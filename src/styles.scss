@@ -1,4 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+:root{
+
+  --color-primary : #fc00ff;
+  --color-secondary :#00dbde;
+  --color-white: #FFF;
+  --color-black:#000;
+  --color-secondary-100:#c6f3f4;
+  --text-color-primary: var(--color-black);
+  --bg-body:var(--color-secondary-100);
+  --bg-primary:var(--color-primary);
+  --bg-secondary:var(--color-secondary);
+  --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+}
+
+.dark-theme{
+  --color-primary : #232526;
+  --color-secondary :#414345;
+  --text-color-primary:#a2aab1;
+  --bg-primary:var(--color-primary);
+  --bg-body:var(--bg-primary);
+  --bg-secondary:var(--color-secondary);
+  --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+}
+
+.color-primary{
+  color: var(--color-primary);
+}
+.color-secondary{
+  color: var(--color-secondary);
+}
+.color-white{
+  color: var(--color-white);
+}
+.color-black{
+  color: var(--color-black);
+}
+.bg-primary{
+  background-color: var(--bg-primary);
+}
+.bg-secondary{
+  background-color: var(--bg-secondary);
+}
+.bg-gradient{
+  background-image: linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+}
+.bg-body{
+  background-color: var(--bg-body);
+}
+.gradient-primary {
+  background-color: var(--color-secondary);
+  background-image: linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.opaque-50
+{
+  opacity: 0.5;
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--color-secondary-100);
+  }
+
