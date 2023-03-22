@@ -1,25 +1,28 @@
-<mat-toolbar class="bg-body">
-  <span><a class="gradient-primary gradient-text" href="#">Aashutosh</a></span>
-  <span class="spacer"></span>
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" (change)="toggleTheme();">
-    <mat-button-toggle [value]="darkTheme"><mat-icon>brightness_2</mat-icon></mat-button-toggle>
-    <mat-button-toggle [value]="brightTheme"><mat-icon>brightness_7</mat-icon></mat-button-toggle>
-  </mat-button-toggle-group>
-  <button mat-icon-button aria-label="Icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
-<div class="hero-section">
-  <div class="hero-content">
-    <h1>Hi there, I am Aashutosh Shrivastav.</h1>
-    <p>.I am a Software Engineer ,Full-stack Web development is my core area of expertise.
-      I enjoy coding, learning new stuff, and relaxing. Will love to here more from you. To know more about me click.
-    </p>
-    <div>
-      <button mat-button [ngStyle]="{'background-color':'var(--bg-primary)'}">Know More!</button>
+<div [ngClass]="{'bright-theme':theme === brightTheme,'dark-theme':theme === darkTheme}">
+
+  <mat-toolbar class="bg-body">
+    <span><a class="bg-gradient gradient-text" href="#">Aashutosh</a></span>
+    <span class="spacer"></span>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" (change)="toggleTheme();">
+      <mat-button-toggle [value]="darkTheme"><mat-icon>brightness_2</mat-icon></mat-button-toggle>
+      <mat-button-toggle [value]="brightTheme"><mat-icon>brightness_7</mat-icon></mat-button-toggle>
+    </mat-button-toggle-group>
+    <button mat-icon-button aria-label="Icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Hi there, I am Aashutosh Shrivastav.</h1>
+      <p>.I am a Software Engineer ,Full-stack Web development is my core area of expertise.
+        I enjoy coding, learning new stuff, and relaxing. Will love to here more from you. To know more about me click.
+      </p>
+      <div>
+        <button mat-button [ngStyle]="{'background-color':'var(--bg-primary)'}">Know More!</button>
+      </div>
     </div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-blob bg-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-blob bg-gradient"></div>
+    </div>
   </div>
 </div>
