@@ -1,27 +1,38 @@
-<div [ngClass]="{'bright-theme':theme === brightTheme,'dark-theme':theme === darkTheme,'bg-body h-100':true}">
-  <mat-toolbar class="bg-body">
-    <span><a class="bg-logo gradient-text" href="#">Aashutosh</a></span>
-    <span class="spacer"></span>
-    <button mat-icon-button matTooltip="dark mode" (click)="toggleTheme();" *ngIf="theme === brightTheme"
-      [value]="darkTheme"><mat-icon>brightness_2</mat-icon></button>
-    <button mat-icon-button matTooltip="bright mode" (click)="toggleTheme();" *ngIf="theme === darkTheme"
-      [value]="brightTheme"><mat-icon>brightness_7</mat-icon></button>
-    <button mat-icon-button aria-label="Icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-toolbar>
-  <div class="hero-section">
-    <div class="hero-content">
-      <h1>Hi there, I am Aashutosh Shrivastav.</h1>
-      <p>I am a Software Engineer ,Full-stack Web development is my core area of expertise.
-        I enjoy coding, learning new stuff, and relaxing. Will love to here more from you. To know more about me click.
-      </p>
-      <div>
-        <button mat-button class="bg-primary">Know More!</button>
+<mat-sidenav-container [ngClass]="{'bright-theme':theme === brightTheme,'dark-theme':theme === darkTheme,'bg-body h-100':true}">
+  <mat-sidenav class=" menu-container" mode="over" [opened]="isMenuOpen" (closed)="menuToggle()">
+      <h3 class="menu-header">Menu</h3>
+    <nav class="list-style-type-none menu-navbar">
+      <li class="menu-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="menu-item"><a href="#" class="nav-link">Work</a></li>
+      <li class="menu-item"><a href="#" class="nav-link">About</a></li>
+      <li class="menu-item"><a href="#" class="nav-link">Contact</a></li>
+    </nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="bg-body">
+      <span><a class="bg-logo gradient-text" href="#">Aashutosh</a></span>
+      <span class="spacer"></span>
+      <button mat-icon-button matTooltip="dark mode" (click)="toggleTheme();" *ngIf="theme === brightTheme"
+        [value]="darkTheme"><mat-icon>brightness_2</mat-icon></button>
+      <button mat-icon-button matTooltip="bright mode" (click)="toggleTheme();" *ngIf="theme === darkTheme"
+        [value]="brightTheme"><mat-icon>brightness_7</mat-icon></button>
+      <button (click)="menuToggle()" mat-icon-button aria-label="Icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1>Hi there, I am Aashutosh Shrivastav.</h1>
+        <p>I am a Software Engineer ,Full-stack Web development is my core area of expertise.
+          I enjoy coding, learning new stuff, and relaxing. Will love to here more from you. To know more about me click.
+        </p>
+        <div>
+          <button mat-button class="bg-primary">Know More!</button>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-blob bg-gradient"></div>
       </div>
     </div>
-    <div class="hero-content">
-      <div class="hero-blob bg-gradient"></div>
-    </div>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

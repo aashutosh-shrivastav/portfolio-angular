@@ -4,6 +4,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -14,7 +15,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSidenavModule
   ],
 })
 export class MaterialModule { }
