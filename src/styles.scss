@@ -2,27 +2,37 @@
 
 
 :root{
-
-  --color-primary : #fc00ff;
-  --color-secondary :#00dbde;
   --color-white: #FFF;
-  --color-black:#000;
-  --color-secondary-100:#c6f3f4;
-  --text-color-primary: var(--color-black);
-  --bg-body:var(--color-secondary-100);
+  --color-pink:#fc00ff;
+  --color-light-blue:#c6f3f4;
+  --color-teal:#00dbde;
+  --color-grey :#a2aab1;
+  --color-black-500:#414345;
+  --color-black-700:#232526;
+  --color-black-900:#000;
+}
+
+.bright-theme{
+  --color-primary : var(--color-pink);
+  --color-secondary : var(--color-teal);
+  --text-color-primary:var(--color-black-900);
+  --bg-body:var(--color-light-blue);
   --bg-primary:var(--color-primary);
   --bg-secondary:var(--color-secondary);
   --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+  --bg-logo:var(--bg-gradient);
 }
 
 .dark-theme{
-  --color-primary : #232526;
-  --color-secondary :#414345;
-  --text-color-primary:#a2aab1;
+  --color-primary : var(--color-black-700);
+  --color-secondary : var(--color-black-500);
+  --text-color-primary:var(--color-grey);
+  --bg-body:var(--color-secondary);
   --bg-primary:var(--color-primary);
-  --bg-body:var(--bg-primary);
   --bg-secondary:var(--color-secondary);
-  --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+  --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary),var(--color-grey));
+  --bg-logo:linear-gradient(to right,var(--color-white),var(--color-grey));
+
 }
 
 .color-primary{
@@ -35,23 +45,23 @@
   color: var(--color-white);
 }
 .color-black{
-  color: var(--color-black);
+  color: var(--color-black-900);
 }
 .bg-primary{
-  background-color: var(--bg-primary);
+  background-color: var(--bg-primary) !important;
 }
 .bg-secondary{
   background-color: var(--bg-secondary);
 }
 .bg-gradient{
-  background-image: linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+  background-image: var(--bg-gradient) //linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+}
+
+.bg-logo{
+  background-image: var(--bg-logo);
 }
 .bg-body{
   background-color: var(--bg-body);
-}
-.gradient-primary {
-  background-color: var(--color-secondary);
-  background-image: linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
 }
 
 .gradient-text {
@@ -71,6 +81,16 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: var(--color-secondary-100);
+  background-color: var(--bg-body);
+  color: var(--text-color-primary);
+  }
+
+  h1,h2,p,span{
+    color: var(--text-color-primary);
+  }
+
+  .h-100
+  {
+    height: 100%;
   }
 
