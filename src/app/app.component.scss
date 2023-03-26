@@ -27,3 +27,23 @@
   margin: auto;
 
 }
+
+.menu-container
+{
+  width: 30%;
+  padding: 2rem;
+}
+
+.menu-navbar
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-header
+{
+  text-align: center;
+  font-size: xx-large;
+  margin: 2rem auto;
+}

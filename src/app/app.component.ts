@@ -12,6 +12,7 @@ export class AppComponent implements OnInit,OnDestroy{
   readonly brightTheme:string = CoreConstants.THEME_BRIGHT;
   readonly darkTheme:string = CoreConstants.THEME_DARK;
   theme: string = this.brightTheme;
+  isMenuOpen:boolean = false;
   constructor(){}
   ngOnInit(): void {
   }
@@ -27,6 +28,16 @@ export class AppComponent implements OnInit,OnDestroy{
     else
     {
       this.theme = CoreConstants.THEME_BRIGHT;
+    }
+  }
+  menuToggle():void{
+    if(this.isMenuOpen)
+    {
+      this.isMenuOpen = false;
+    }
+    else
+    {
+      this.isMenuOpen = true;
     }
   }
 
