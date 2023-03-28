@@ -1,0 +1,22 @@
+.image {
+  background: #34495e;
+  border: 1px solid #34495e;
+  width: 100%;
+}
+
+.image-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.image-cover {
+  object-fit: cover;
+  object-position: right top;
+}
+
+
+.project-card
+{
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px var(--color-secondary);
+}

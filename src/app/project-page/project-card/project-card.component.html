@@ -1,0 +1,16 @@
+<mat-card class="project-card" style="min-width: 320px;">
+  <mat-card-header>
+    <mat-card-title>{{project.title}}</mat-card-title>
+  </mat-card-header>
+  <div style="margin: 0 1rem;">
+    <img class="image image-cover" mat-card-image [src]="project.img" alt="Photo of project" st>
+  </div>
+  <mat-card-content>
+    <p>{{project.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="border-primary mr-500" mat-button>Code</button>
+    <button class="border-secondary" mat-button>Demo</button>
+  </mat-card-actions>
+</mat-card>

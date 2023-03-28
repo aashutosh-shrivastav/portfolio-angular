@@ -1,0 +1,8 @@
+<div class="project-page">
+  <h2 class="project-page-title">Projects</h2>
+  <div class="project-page-description"></div>
+  <div class="d-grid project-card-container">
+    <app-project-card *ngFor="let project of itemList"  [project]="project">
+    </app-project-card>
+  </div>
+</div>
