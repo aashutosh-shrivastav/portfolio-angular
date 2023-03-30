@@ -4,27 +4,20 @@
     "description":"Project to showcase Restaurant dishes and book table online.",
     "rowSpan":1,
     "colSpan":1,
-    "img":"../../assets/images/project_restaurant_app.JPG"
+    "img":"../../assets/images/project_restaurant_app_low.JPG"
   },
   {
-    "title":"Restaurant Order App",
-    "description":"Project to showcase Restaurant dishes and book table online.",
+    "title":"React Sorting Visualizer App",
+    "description":"Project to visualize sorting algorithms using React library.",
     "rowSpan":1,
     "colSpan":1,
-    "img":"../../assets/images/project_restaurant_app.JPG"
+    "img":"../../assets/images/project_sorting_visualizer_spa_low.JPG"
   },
   {
-    "title":"Restaurant Order App",
-    "description":"Project to showcase Restaurant dishes and book table online.",
+    "title":"Menu Display App",
+    "description":"Project to showcase Restaurant's dishes and book table.",
     "rowSpan":1,
     "colSpan":1,
-    "img":"../../assets/images/project_restaurant_app.JPG"
-  },
-  {
-    "title":"Restaurant Order App",
-    "description":"Project to showcase Restaurant dishes and book table online.",
-    "rowSpan":1,
-    "colSpan":1,
-    "img":"../../assets/images/project_restaurant_app.JPG"
+    "img":"../../assets/images/restaurant_menu_showcase_app_low.JPG"
   }
 ]
