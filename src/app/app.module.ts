@@ -8,10 +8,12 @@ import { MaterialModule } from './material/material.module';
 import {FormsModule  } from '@angular/forms';
 import { ProjectPageModule } from './project-page/project-page.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SkillPageComponent } from './skill-page/skill-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkillPageComponent
   ],
   imports: [
     BrowserModule,
