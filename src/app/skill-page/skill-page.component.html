@@ -1,1 +1,17 @@
-<p>skill-page works!</p>
+<h2>Toolbox</h2>
+<div class="d-flex jc-space-around">
+  <section class="skill-block" *ngFor="let skillCategory of skillSet" style="width: 100%;margin: 2rem;">
+    <mat-card style="width: 100%;" >
+      <mat-card-header class="jc-center">
+        <h3> {{skillCategory.title}}</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <ul class="p-0 d-grid jc-center  list-style-none skills-list" >
+          <li *ngFor="let skill of skillCategory.skills" class="skill">
+            {{skill.title}}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>
