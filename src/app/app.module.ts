@@ -9,6 +9,8 @@ import {FormsModule  } from '@angular/forms';
 import { ProjectPageModule } from './project-page/project-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillPageComponent } from './skill-page/skill-page.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { SkillPageComponent } from './skill-page/skill-page.component';
     MaterialModule,
     FormsModule,
     ProjectPageModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
