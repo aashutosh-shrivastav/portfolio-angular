@@ -1,0 +1,134 @@
+[
+    {
+      "id":"skillCategory_1",
+      "priority":1,
+      "title" :"Frontend",
+      "description":"skills and frameworks",
+      "img":"",
+      "skills":[
+        {
+          "id":"skill_1",
+          "priority":1,
+          "title" :"HTML",
+          "description":"Hyper text markup language",
+          "img":""
+        },
+        {
+          "id":"skill_2",
+          "priority":2,
+          "title" :"Cascading Style Sheet",
+          "description":"",
+          "img":""
+        },
+        {
+          "id":"skill_3",
+          "priority":3,
+          "title" :"Javascript",
+          "description":"",
+          "img":""
+        },
+        {
+          "id":"skill_4",
+          "priority":4,
+          "title" :"Angular",
+          "description":"Clientside Javascript framework",
+          "img":""
+        },
+        {
+          "id":"skill_5",
+          "priority":5,
+          "title" :"React",
+          "description":"Clientside Javascript Library",
+          "img":""
+        },
+        {
+          "id":"skill_6",
+          "priority":6,
+          "title" :"Jest/Karma",
+          "description":"Unit testing Libraries",
+          "img":""
+        },
+        {
+          "id":"skill_7",
+          "priority":7,
+          "title" :"Figma",
+          "description":"UI/UX design prototyping",
+          "img":""
+        }
+      ]
+    },
+    {
+      "id":"skillCategory_2",
+      "priority":2,
+      "title" :"Backend",
+      "description":"skills and frameworks",
+      "img":"",
+      "skills":[
+        {
+          "id":"skill_1",
+          "priority":1,
+          "title" :"Java/Springboot",
+          "description":"language and framework",
+          "img":""
+        },
+        {
+          "id":"skill_2",
+          "priority":2,
+          "title" :"Node.js",
+          "description":"javascript framework",
+          "img":""
+        },
+        {
+          "id":"skill_3",
+          "priority":3,
+          "title" :"TestNg",
+          "description":"Unit testing framework",
+          "img":""
+        }
+      ]
+    },
+    {
+      "id":"skillCategory_3",
+      "priority":2,
+      "title" :"Databases",
+      "description":"",
+      "img":"",
+      "skills":[
+        {
+          "id":"skill_1",
+          "priority":1,
+          "title" :"SQL",
+          "description":"Structured Query Language",
+          "img":""
+        },
+        {
+          "id":"skill_2",
+          "priority":2,
+          "title" :"MySQL",
+          "description":"Rational Query Language",
+          "img":""
+        },
+        {
+          "id":"skill_3",
+          "priority":3,
+          "title" :"PostgreSQL",
+          "description":"Rational Query Language",
+          "img":""
+        },
+        {
+          "id":"skill_4",
+          "priority":4,
+          "title" :"MongoDB",
+          "description":"NoSQL",
+          "img":""
+        },
+        {
+          "id":"skill_5",
+          "priority":5,
+          "title" :"GraphQL",
+          "description":"NoSQL",
+          "img":""
+        }
+      ]
+    }
+]

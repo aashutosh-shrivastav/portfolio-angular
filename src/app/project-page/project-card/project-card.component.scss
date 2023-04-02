@@ -17,6 +17,8 @@
 
 .project-card
 {
-  border-radius: 10px;
+  // border-radius: 10px;
   box-shadow: 5px 5px 5px var(--color-secondary);
+  min-width: 320px;
+  height: 100%;
 }

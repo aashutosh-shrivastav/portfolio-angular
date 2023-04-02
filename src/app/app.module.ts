@@ -5,13 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import {FormsModule  } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ProjectPageModule } from './project-page/project-page.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SkillPageComponent } from './skill-page/skill-page.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { AboutPageComponent } from './about-page/about-page.component'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkillPageComponent,
+    ContactFormComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +29,13 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule,
     ProjectPageModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

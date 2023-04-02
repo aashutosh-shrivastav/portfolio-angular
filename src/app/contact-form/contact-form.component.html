@@ -1,0 +1,28 @@
+<div class="contact-page">
+  <h2 >Contact Me !</h2>
+  <form [formGroup]="contactForm" class="d-flex contact-form" (ngSubmit)="onSubmit()" >
+    <mat-form-field appearance="outline" class="form-width-45 mr-auto" >
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Your fullname"  formControlName="name">
+      <mat-error *ngIf="contactForm.controls['name'].invalid">{{getErrorMessage('name')}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline"  class="form-width-45">
+      <mat-label>Email id</mat-label>
+      <input matInput placeholder="yourEmail@provider.com" formControlName="emailId">
+      <mat-error *ngIf="contactForm.controls['emailId'].invalid">{{getErrorMessage('emailId')}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline"  class="form-width-100">
+      <mat-label>Subject</mat-label>
+      <input matInput placeholder="Email subject" formControlName="subject" >
+    </mat-form-field>
+    <mat-form-field appearance="outline"  class="form-width-100">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message"></textarea>
+      <mat-error *ngIf="contactForm.controls['message'].invalid">{{getErrorMessage('message')}}</mat-error>
+    </mat-form-field>
+  </form>
+  <a mat-button [href]="getValidHref()" class="bg-primary td-none">Submit</a>
+</div>
+
+
+
