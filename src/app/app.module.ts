@@ -11,11 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { SkillPageComponent } from './skill-page/skill-page.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillPageComponent
+    SkillPageComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
