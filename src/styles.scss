@@ -131,7 +131,6 @@ body {
   .d-grid
   {
     display: grid;
-    justify-items: center;
   }
 
   .list-style-type-none
@@ -161,7 +160,10 @@ body {
 {
   margin-top:  auto;
 }
-
+.mr-auto
+{
+  margin-right:  auto;
+}
 .jc-space-around
 {
   justify-content: space-around;
@@ -169,6 +171,10 @@ body {
 .jc-center
 {
   justify-content: center;
+}
+.ji-center
+{
+  justify-items: center;
 }
 
 .list-style-none{
@@ -178,4 +184,17 @@ body {
 .p-0
 {
   padding: 0;
+}
+.form-width-45
+{
+  width: 45%;
+}
+.form-width-100
+{
+  width: 100%;
+}
+
+.td-none
+{
+  text-decoration: none;
 }
