@@ -1,200 +1,81 @@
 
 @use '@angular/material' as mat;
+@import "assets/css-partials/includes";
 
 @include mat.core();
 
-$myapp-primary: mat.define-palette(mat.$indigo-palette);
-$myapp-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$primary: mat.define-palette(mat.$purple-palette,A200);
+$accent: mat.define-palette(mat.$teal-palette,A400);
+$warn: mat.define-palette(mat.$red-palette);
 
-$myapp-warn: mat.define-palette(mat.$red-palette);
 
-$myapp-theme: mat.define-light-theme((
+$dark-primary: mat.define-palette(mat.$purple-palette,A200);
+$dark-accent: mat.define-palette(mat.$teal-palette,A400);
+$dark-warn: mat.define-palette(mat.$red-palette);
+
+$theme: mat.define-light-theme((
   color: (
-    primary: $myapp-primary,
-    accent: $myapp-accent,
-    warn: $myapp-warn,
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
   )
 ));
 
-@include mat.all-component-themes($myapp-theme);
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
+  )
+));
 
 
 
+@include mat.all-component-themes($theme);
+@include includes-mixin($theme);
 
-:root{
-  --color-white: #FFF;
-  --color-pink:#fc00ff;
-  --color-light-blue:#c6f3f4;
-  --color-teal:#00dbde;
-  --color-grey :#a2aab1;
-  --color-black-500:#414345;
-  --color-black-700:#232526;
-  --color-black-900:#000;
-}
-
-.bright-theme{
-  --color-primary : var(--color-pink);
-  --color-secondary : var(--color-teal);
-  --text-color-primary:var(--color-black-900);
-  --bg-body:var(--color-light-blue);
-  --bg-primary:var(--color-primary);
-  --bg-secondary:var(--color-secondary);
-  --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
-  --bg-logo:var(--bg-gradient);
-}
-
-.dark-theme{
-  --color-primary : var(--color-black-700);
-  --color-secondary : var(--color-black-500);
-  --text-color-primary:var(--color-grey);
-  --bg-body:var(--color-secondary);
-  --bg-primary:var(--color-primary);
-  --bg-secondary:var(--color-secondary);
-  --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary),var(--color-grey));
-  --bg-logo:linear-gradient(to right,var(--color-white),var(--color-grey));
-
-}
-
-.color-primary{
-  color: var(--color-primary);
-}
-.color-secondary{
-  color: var(--color-secondary);
-}
-.color-white{
-  color: var(--color-white);
-}
-.color-black{
-  color: var(--color-black-900);
-}
-.bg-primary{
-  background-color: var(--bg-primary) !important;
-}
-.bg-secondary{
-  background-color: var(--bg-secondary);
-}
-.bg-gradient{
-  background-image: var(--bg-gradient) //linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
-}
-
-.bg-transparent
-{
-  background-color: transparent;
-}
-
-.bg-logo{
-  background-image: var(--bg-logo);
-}
-.bg-body{
-  background-color: var(--bg-body);
-}
-
-.gradient-text {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-
-.opaque-50
-{
-  opacity: 0.5;
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  @include includes-mixin($dark-theme);
 }
 
 html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: var(--bg-body);
-  color: var(--text-color-primary);
   }
 
-  h1,h2,p,span{
-    color: var(--text-color-primary);
-  }
+// :root
+// {
+//   --color-white: #FFF;
+//   --color-pink:#fc00ff;
+//   --color-light-blue:#c6f3f4;
+//   --color-teal:#00dbde;
+//   --color-grey :#a2aab1;
+//   --color-black-500:#414345;
+//   --color-black-700:#232526;
+//   --color-black-900:#000;
+// }
 
-  .h-100
-  {
-    height: 100%;
-  }
+// .bright-theme{
+//   --color-primary : var(--color-pink);
+//   --color-secondary : var(--color-teal);
+//   --text-color-primary:var(--color-black-900);
+//   --bg-body:var(--color-light-blue);
+//   --bg-primary:var(--color-primary);
+//   --bg-secondary:var(--color-secondary);
+//   --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary));
+//   --bg-logo:var(--bg-gradient);
+// }
 
-  .ml-auto{
-    margin-left: auto;
-  }
+// .dark-theme{
+//   --color-primary : var(--color-black-700);
+//   --color-secondary : var(--color-black-500);
+//   --text-color-primary:var(--color-grey);
+//   --bg-body:var(--color-secondary);
+//   --bg-primary:var(--color-primary);
+//   --bg-secondary:var(--color-secondary);
+//   --bg-gradient:linear-gradient(to right,var(--bg-primary),var(--bg-secondary),var(--color-grey));
+//   --bg-logo:linear-gradient(to right,var(--color-white),var(--color-grey));
 
-  .d-flex
-  {
-    display: flex;
-  }
-
-  .d-grid
-  {
-    display: grid;
-  }
-
-  .list-style-type-none
-  {
-    list-style-type: none;
-  }
-
-  .page-container
-  {
-    padding: 0 2rem;
-  }
-
-  .border-primary
-{
-  border: 1px solid var(--color-primary) !important;
-}
-.border-secondary
-{
-  border: 1px solid var(--color-secondary) !important;
-}
-
-.mr-500
-{
-  margin-right:  1rem !important;
-}
-.mt-auto
-{
-  margin-top:  auto;
-}
-.mr-auto
-{
-  margin-right:  auto;
-}
-.jc-space-around
-{
-  justify-content: space-around;
-}
-.jc-center
-{
-  justify-content: center;
-}
-.ji-center
-{
-  justify-items: center;
-}
-
-.list-style-none{
-  list-style: none;
-}
-
-.p-0
-{
-  padding: 0;
-}
-.form-width-45
-{
-  width: 45%;
-}
-.form-width-100
-{
-  width: 100%;
-}
-
-.td-none
-{
-  text-decoration: none;
-}
+// }
