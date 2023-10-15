@@ -1,0 +1,14 @@
+@import 'layout';
+@import 'margin';
+@import 'padding';
+@import 'color';
+@import 'utility';
+
+@mixin includes-mixin($theme)
+{
+
+// $foreground:mat-get($theme,foreground);
+// $background:mat-get($theme,background);
+  @include color-mixin($theme);
+  @include utility-mixin($theme);
+}
